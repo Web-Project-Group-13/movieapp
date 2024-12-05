@@ -1,5 +1,4 @@
 import { Router } from "express";
-
 import { hash, compare } from "bcrypt";
 import jwt from "jsonwebtoken";
 import { insertUser, deleteUser, selectUserByEmail } from "../models/User.js";
@@ -9,7 +8,7 @@ const router = Router();
 const JWT_SECRET = 'mysecretkey';
 
 
-router.post('/', async (req, res, next) => {
+router.post('/register', async (req, res, next) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
@@ -29,7 +28,7 @@ router.post('/', async (req, res, next) => {
         });
     } catch (error) {
         console.error('Virhe käyttäjän lisäämisessä:', error);
-        next(error); // Lähetetään virhe ylempään virheenkäsittelijään
+        next(error); 
     }
 });
 

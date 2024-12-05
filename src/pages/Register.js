@@ -12,6 +12,8 @@ export default function Register() {
     const [usernameError, setUsernameError] = useState('');
     const navigate = useNavigate();
 
+    
+
     //Salasanan validointi
     const validatePasswordAndUsername = (username,password) => {
         if(username === '') {

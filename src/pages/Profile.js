@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import './profile.css';
 import axios from 'axios';
 import { useState } from 'react';
-import '../components/news.js'
 import News from '../components/news.js';
+import { Link } from 'react-router-dom';
 
 function Profile({ username }) {
     const [movies, setMovies] = useState([]);
@@ -69,6 +69,11 @@ function Profile({ username }) {
 
   return (
     <div>
+      <nav className = "navbar">
+        <Link to="/home" className="nav-link">Home</Link>
+        <Link to="/reviews" className="nav-link">Reviews</Link>
+        <Link to="/logout" className="nav-link">Logout</Link>
+        </nav>
     <div className='profile-container'>
       <h1>Profiili</h1>
       <h2> Tervetuloa {username}!</h2>

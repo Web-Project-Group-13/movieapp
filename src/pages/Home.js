@@ -156,6 +156,7 @@ const Home = () => {
           <li><a href="/login">Login</a></li>
           <li><a href="/register">Register</a></li>
           <li><a href="/profile">Profile</a></li>
+          <li><a href="/reviews">Reviews</a></li>
         </ul>
       </nav>
 

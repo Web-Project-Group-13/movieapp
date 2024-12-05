@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Register from './pages/Register';
+import Register from './pages/Register'
 import Profile from './pages/Profile'
+import Reviews from './pages/Reviews'
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,7 +17,7 @@ function App() {
     setUser(null);
   };*/
 
-  const username = "testi2@oamk.fi"; // Hae tämä myöhemmin kirjautuneen käyttäjän tiedoista
+  const username = "testi3@oamk.fi"; // Hae tämä myöhemmin kirjautuneen käyttäjän tiedoista
 
   return (
     //<Router>
@@ -51,6 +52,10 @@ function App() {
         <Route 
           path="/profile" 
           element={<Profile username={username} />} />
+
+        <Route
+          path="/reviews"
+          element={<Reviews />} />
       </Routes>
     //</Router>
   );
